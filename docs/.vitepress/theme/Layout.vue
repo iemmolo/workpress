@@ -1,11 +1,13 @@
 <script setup>
 import { useData } from 'vitepress'
+import Header from './components/Header.vue'
 
 // https://vitepress.dev/reference/runtime-api#usedata
 const { site, frontmatter } = useData()
 </script>
 
 <template>
+	<Header></Header>
 	<div v-if="frontmatter.home">
 		<h1>{{ site.title }}</h1>
 		<p>{{ site.description }}</p>
